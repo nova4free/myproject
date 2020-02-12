@@ -46,7 +46,7 @@ class DeviceController extends Controller
         $client = new Client();
 
         $res = $client->get($url);
-        dd($client->getBody());
+        dd($res->getBody());
     }
 
     /**
