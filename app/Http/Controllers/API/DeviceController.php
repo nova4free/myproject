@@ -43,10 +43,12 @@ class DeviceController extends Controller
         $response = Zttp::withoutRedirecting()->get($url);
 //        Log::debug($response->status);
 
-        $client = new Client();
+        $client = new Client([
+
+        ]);
 
         $res = $client->get($url);
-        return json_encode($res->getBody(), 200);
+        return json_encode($res->getBody(), true);
     }
 
     /**
