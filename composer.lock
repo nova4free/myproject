@@ -4,8 +4,132 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6912857f1cc8072cad68af4c40f4a7c1",
+    "content-hash": "ae04f74db2e11557421261b5b00f5b87",
     "packages": [
+        {
+            "name": "arcanedev/log-viewer",
+            "version": "5.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ARCANEDEV/LogViewer.git",
+                "reference": "54ce8ce0258d15dd3e02abf0b2b541cd0c5e4895"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ARCANEDEV/LogViewer/zipball/54ce8ce0258d15dd3e02abf0b2b541cd0c5e4895",
+                "reference": "54ce8ce0258d15dd3e02abf0b2b541cd0c5e4895",
+                "shasum": ""
+            },
+            "require": {
+                "arcanedev/support": "^5.0",
+                "ext-json": "*",
+                "php": ">=7.2.0",
+                "psr/log": "^1.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.0",
+                "orchestra/testbench": "^4.0",
+                "phpunit/phpcov": "^6.0",
+                "phpunit/phpunit": "^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Arcanedev\\LogViewer\\LogViewerServiceProvider",
+                        "Arcanedev\\LogViewer\\Providers\\DeferredServicesProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Arcanedev\\LogViewer\\": "src/"
+                },
+                "files": [
+                    "constants.php",
+                    "helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "ARCANEDEV",
+                    "email": "arcanedev.maroc@gmail.com",
+                    "homepage": "https://github.com/arcanedev-maroc",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Provides a Log Viewer for Laravel 5/6",
+            "homepage": "https://github.com/ARCANEDEV/LogViewer",
+            "keywords": [
+                "arcanedev",
+                "arcanesoft",
+                "laravel",
+                "log",
+                "log viewer",
+                "log-viewer",
+                "logviewer"
+            ],
+            "time": "2020-01-09T12:45:52+00:00"
+        },
+        {
+            "name": "arcanedev/support",
+            "version": "5.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ARCANEDEV/Support.git",
+                "reference": "cf731be18e7d0138223bd8e134f623a9d8c674d7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ARCANEDEV/Support/zipball/cf731be18e7d0138223bd8e134f623a9d8c674d7",
+                "reference": "cf731be18e7d0138223bd8e134f623a9d8c674d7",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/filesystem": "^6.0",
+                "illuminate/support": "^6.0",
+                "php": ">=7.2.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^4.0",
+                "phpunit/phpcov": "^6.0",
+                "phpunit/phpunit": "^8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Arcanedev\\Support\\": "src/"
+                },
+                "files": [
+                    "constants.php",
+                    "helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "ARCANEDEV",
+                    "email": "arcanedev.maroc@gmail.com",
+                    "homepage": "https://github.com/arcanedev-maroc"
+                }
+            ],
+            "description": "ARCANEDEV Support Helpers",
+            "homepage": "https://github.com/ARCANEDEV/Support",
+            "keywords": [
+                "arcanedev",
+                "arcanesoft",
+                "laravel",
+                "support"
+            ],
+            "time": "2019-10-02T18:20:38+00:00"
+        },
         {
             "name": "cakephp/chronos",
             "version": "1.3.0",
@@ -592,6 +716,49 @@
             "time": "2019-03-31T00:38:28+00:00"
         },
         {
+            "name": "drobee/nova-sluggable",
+            "version": "1.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/drobee/nova-sluggable.git",
+                "reference": "c2bd05aff51511911cf5235c8817622e92095998"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/drobee/nova-sluggable/zipball/c2bd05aff51511911cf5235c8817622e92095998",
+                "reference": "c2bd05aff51511911cf5235c8817622e92095998",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": "5.6.*|5.7.*|5.8.*|6.*",
+                "illuminate/support": "5.6.*|5.7.*|5.8.*|6.*",
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Drobee\\NovaSluggable\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Drobee\\NovaSluggable\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Slug field for Laravel Nova",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "time": "2019-10-10T20:50:28+00:00"
+        },
+        {
             "name": "egulias/email-validator",
             "version": "2.1.15",
             "source": {
@@ -1071,6 +1238,52 @@
             ],
             "description": "Highlight PHP code in terminal",
             "time": "2018-09-29T18:48:56+00:00"
+        },
+        {
+            "name": "kitetail/zttp",
+            "version": "v0.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kitetail/zttp.git",
+                "reference": "92662d7f9025b4c9a0b8a585e31810461fcca435"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kitetail/zttp/zipball/92662d7f9025b4c9a0b8a585e31810461fcca435",
+                "reference": "92662d7f9025b4c9a0b8a585e31810461fcca435",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.0",
+                "php": ">=7.0",
+                "tightenco/collect": "^5.4"
+            },
+            "require-dev": {
+                "laravel/lumen-framework": "5.5.*",
+                "phpunit/phpunit": "^6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/Zttp.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adam Wathan",
+                    "email": "adam.wathan@gmail.com"
+                }
+            ],
+            "description": "A developer-experience focused HTTP client, optimized for most common use cases.",
+            "keywords": [
+                "Guzzle",
+                "http"
+            ],
+            "time": "2019-06-10T12:18:52+00:00"
         },
         {
             "name": "laminas/laminas-diactoros",
@@ -2509,6 +2722,58 @@
             "time": "2018-07-02T15:55:56+00:00"
         },
         {
+            "name": "php-junior/nova-logs",
+            "version": "v1.0.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHPJunior/nova-logs.git",
+                "reference": "e5bc157bbbe680ff6537c9a166a0d0629e4f4c73"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHPJunior/nova-logs/zipball/e5bc157bbbe680ff6537c9a166a0d0629e4f4c73",
+                "reference": "e5bc157bbbe680ff6537c9a166a0d0629e4f4c73",
+                "shasum": ""
+            },
+            "require": {
+                "arcanedev/log-viewer": "*",
+                "php": "^7.1.3"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^3.6",
+                "phpunit/phpunit": "7.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "PhpJunior\\NovaLogViewer\\ToolServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PhpJunior\\NovaLogViewer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nyi Nyi Lwin",
+                    "email": "nyinyilwin1992@hotmail.com"
+                }
+            ],
+            "description": "Provides a Log Viewer for Laravel Nova",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "time": "2018-11-02T07:46:39+00:00"
+        },
+        {
             "name": "phpoption/phpoption",
             "version": "1.7.2",
             "source": {
@@ -3223,6 +3488,69 @@
                 "spatie"
             ],
             "time": "2020-01-17T16:18:51+00:00"
+        },
+        {
+            "name": "spatie/nova-tail-tool",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/nova-tail-tool.git",
+                "reference": "45b6f54cf758226e80751b600b08601034525f87"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/nova-tail-tool/zipball/45b6f54cf758226e80751b600b08601034525f87",
+                "reference": "45b6f54cf758226e80751b600b08601034525f87",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/nova": "^2.0",
+                "php": ">=7.2.0",
+                "symfony/process": "^4.2"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^3.8|^4.0",
+                "phpunit/phpunit": "8.0",
+                "spatie/phpunit-snapshot-assertions": "^2.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Spatie\\TailTool\\TailToolServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\TailTool\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Sebastian De Deyne",
+                    "email": "sebastian@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A Laravel Nova tool to display the application log.",
+            "homepage": "https://github.com/spatie/nova-tail-tool",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "time": "2019-09-04T08:34:20+00:00"
         },
         {
             "name": "spatie/once",
@@ -4771,6 +5099,56 @@
                 "dump"
             ],
             "time": "2020-01-25T12:44:29+00:00"
+        },
+        {
+            "name": "tightenco/collect",
+            "version": "v5.8.35",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tightenco/collect.git",
+                "reference": "c93a7039e6207ad533a09109838fe80933fcc72c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tightenco/collect/zipball/c93a7039e6207ad533a09109838fe80933fcc72c",
+                "reference": "c93a7039e6207ad533a09109838fe80933fcc72c",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3",
+                "symfony/var-dumper": ">=3.4 <5"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.0",
+                "nesbot/carbon": "^1.26.3",
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/Collect/Support/helpers.php",
+                    "src/Collect/Support/alias.php"
+                ],
+                "psr-4": {
+                    "Tightenco\\Collect\\": "src/Collect"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                }
+            ],
+            "description": "Collect - Illuminate Collections as a separate package.",
+            "keywords": [
+                "collection",
+                "laravel"
+            ],
+            "time": "2019-09-17T18:57:01+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",

@@ -79,6 +79,9 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     {
         return [
             \Vyuldashev\NovaPermission\NovaPermissionTool::make(),
+            new \PhpJunior\NovaLogViewer\Tool(),
+            new \Spatie\TailTool\TailTool(),
+
         ];
     }
 
