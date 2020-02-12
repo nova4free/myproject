@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Zttp\Zttp;
@@ -42,8 +43,10 @@ class DeviceController extends Controller
         $response = Zttp::withoutRedirecting()->get($url);
 //        Log::debug($response->status);
 
+        $client = new Client();
 
-        dd($response);
+        $res = $client->get($url);
+        dd($client->getBody());
     }
 
     /**
