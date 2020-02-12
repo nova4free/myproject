@@ -45,7 +45,7 @@ class Team extends Resource
         return [
             ID::make()->sortable(),
             Text::make('Name'),
-            BelongsTo::make('Enterprise'),
+            BelongsTo::make('Enterprises', 'enterprises'),
 
             BelongsToMany::make('Users', 'users')
         ];
