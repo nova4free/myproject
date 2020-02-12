@@ -39,12 +39,12 @@ class DeviceController extends Controller
      */
     public function show($id)
     {
-        $url = "http://api.cliko.io/users/{$id}";
-        $response = Zttp::withoutRedirecting()->get($url);
+        $url = "users/{$id}";
+//        $response = Zttp::withoutRedirecting()->get($url);
 //        Log::debug($response->status);
 
         $client = new Client([
-
+            'base_uri' => 'http://api.cliko.io/'
         ]);
 
         $res = $client->get($url);
