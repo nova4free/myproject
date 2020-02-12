@@ -40,7 +40,7 @@ class DeviceController extends Controller
     {
         $url = "http://api.cliko.io/users/{$id}";
         $response = Zttp::withHeaders(['Accept' => 'application/json'])->get($url);
-        Log::debug($response->status);
+//        Log::debug($response->status);
         return response()->json($response, 200);
     }
 
