@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ce547d8-a428-40d0-9915-cc1c943ed003" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/DeviceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/DeviceController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -164,8 +165,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/Http/Controllers/API/DeviceController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="378">
-                  <caret line="48" column="15" selection-start-line="48" selection-start-column="15" selection-end-line="48" selection-end-column="15" />
+                <state relative-caret-position="324">
+                  <caret line="46" column="90" selection-start-line="46" selection-start-column="90" selection-end-line="46" selection-end-column="90" />
                   <folding>
                     <element signature="e#44#80#0#PHP" expanded="true" />
                   </folding>
@@ -394,8 +395,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="180" />
-    <option name="y" value="281" />
+    <option name="x" value="135" />
+    <option name="y" value="109" />
     <option name="width" value="1546" />
     <option name="height" value="836" />
   </component>
@@ -521,7 +522,7 @@
       <option name="presentableId" value="Default" />
       <updated>1581226844313</updated>
       <workItem from="1581226845459" duration="15476000" />
-      <workItem from="1581432324434" duration="17036000" />
+      <workItem from="1581432324434" duration="17519000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1581404512501</created>
@@ -642,11 +643,32 @@
       <option name="project" value="LOCAL" />
       <updated>1581480865291</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Added Team users">
+      <created>1581480945441</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1581480945441</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Added Team users">
+      <created>1581481059121</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1581481059121</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Added Team users">
+      <created>1581481178026</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1581481178026</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32512000" />
+    <option name="totallyTimeSpent" value="32995000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -848,8 +870,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/API/DeviceController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="48" column="15" selection-start-line="48" selection-start-column="15" selection-end-line="48" selection-end-column="15" />
+        <state relative-caret-position="324">
+          <caret line="46" column="90" selection-start-line="46" selection-start-column="90" selection-end-line="46" selection-end-column="90" />
           <folding>
             <element signature="e#44#80#0#PHP" expanded="true" />
           </folding>

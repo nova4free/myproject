@@ -43,12 +43,12 @@ class DeviceController extends Controller
 //        $response = Zttp::withoutRedirecting()->get($url);
 //        Log::debug($response->status);
 
-        $client = new Client([
-            'base_uri' => 'http://api.cliko.io/'
-        ]);
+        $client = new Client();
+        $res = $client->request('GET', 'http://api.cliko.io/users/5e0df1b8a644a3e25c2c9249');
 
-        $res = $client->get($url);
-        return json_encode($res->getBody(), true);
+        if ($res->getStatusCode() == 200) {
+            return json_decode($res->getBody(), true);
+        }
     }
 
     /**
