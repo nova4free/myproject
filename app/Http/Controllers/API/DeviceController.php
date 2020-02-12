@@ -46,7 +46,7 @@ class DeviceController extends Controller
         $client = new Client();
 
         $res = $client->get($url);
-        dd($res->getBody());
+        return json_encode($res->getBody(), 200);
     }
 
     /**
