@@ -70,7 +70,7 @@ class User extends Resource
             RoleBooleanGroup::make('Roles'),
             PermissionBooleanGroup::make('Permissions'),
 
-            BelongsToMany::make('Enterprise', 'enterprises')
+            BelongsToMany::make('Teams', 'teams')
         ];
     }
 

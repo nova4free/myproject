@@ -11,5 +11,11 @@ class Team extends Model
         return $this->belongsToMany(User::class);
     }
 
+    public function enterprises()
+    {
+        return $this->belongsToMany(Enterprise::class);
+    }
+
+
 
 }
