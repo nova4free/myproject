@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class EnterpriseSeeder extends Seeder
+class PermissionSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,6 @@ class EnterpriseSeeder extends Seeder
      */
     public function run()
     {
-
+        //
     }
 }

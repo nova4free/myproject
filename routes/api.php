@@ -13,6 +13,8 @@ use Illuminate\Http\Request;
 |
 */
 
+Auth::routes(['verify' => true]);
+
 Route::get('/users', function (Request $request) {
     return \App\User::all();
 });
@@ -22,3 +24,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('users/{id}', 'API\DeviceController@show');
+

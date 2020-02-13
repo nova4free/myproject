@@ -8,6 +8,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
 
+
 class User extends Authenticatable
 {
     use HasApiTokens, Notifiable, HasRoles;
@@ -42,7 +43,7 @@ class User extends Authenticatable
 
     public function enterprises()
     {
-        return $this->belongsToMany(Enterprise::class);
+        return $this->hasMany(Enterprise::class);
     }
 
     public function teams()
