@@ -30,9 +30,7 @@ class UserPolicy
      */
     public function view(User $user, User $model)
     {
-        Log::debug($user->id);
-        Log::debug(auth()->id());
-        return $model->id == auth()->id();
+        return true;
     }
 
     /**
