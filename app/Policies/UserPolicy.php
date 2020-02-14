@@ -4,6 +4,7 @@ namespace App\Policies;
 
 use App\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
+use Illuminate\Support\Facades\Log;
 
 class UserPolicy
 {
@@ -29,7 +30,9 @@ class UserPolicy
      */
     public function view(User $user, User $model)
     {
-        return $user->id == $model->id;
+        Log::debug($user->id);
+        Log::debug(auth()->id());
+        return $model->id == auth()->id();
     }
 
     /**
@@ -40,7 +43,8 @@ class UserPolicy
      */
     public function create(User $user)
     {
-        //
+        return true;
+        return $user->hasRole('super-admin');
     }
 
     /**
@@ -52,7 +56,7 @@ class UserPolicy
      */
     public function update(User $user, User $model)
     {
-        //
+        return $user->hasRole('super-admin');
     }
 
     /**

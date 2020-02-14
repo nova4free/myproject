@@ -4,6 +4,7 @@ namespace App\Nova;
 
 use App\Nova\Filters\UserRole;
 use Illuminate\Http\Request;
+use KABBOUCHI\NovaImpersonate\Impersonate;
 use Laravel\Nova\Fields\BelongsToMany;
 use Laravel\Nova\Fields\Gravatar;
 use Laravel\Nova\Fields\ID;
@@ -71,7 +72,9 @@ class User extends Resource
             MorphToMany::make('Permissions', 'permissions', \Vyuldashev\NovaPermission\Permission::class),
             RoleBooleanGroup::make('Roles'),
             PermissionBooleanGroup::make('Permissions'),
-//            Impersonate::make($this),
+            Impersonate::make($this)->withMeta([
+                'redirect_to' => '/admin'
+            ]),
 
             BelongsToMany::make('Teams', 'teams')
         ];

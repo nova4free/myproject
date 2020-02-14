@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ae04f74db2e11557421261b5b00f5b87",
+    "content-hash": "62d5a06101edd8a7af3d69d6c804a280",
     "packages": [
         {
             "name": "arcanedev/log-viewer",
@@ -1240,6 +1240,48 @@
             "time": "2018-09-29T18:48:56+00:00"
         },
         {
+            "name": "kabbouchi/nova-impersonate",
+            "version": "v1.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KABBOUCHI/nova-impersonate.git",
+                "reference": "b5579fa059e1fbde9e7fbf6748ec3c60d53711d8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KABBOUCHI/nova-impersonate/zipball/b5579fa059e1fbde9e7fbf6748ec3c60d53711d8",
+                "reference": "b5579fa059e1fbde9e7fbf6748ec3c60d53711d8",
+                "shasum": ""
+            },
+            "require": {
+                "lab404/laravel-impersonate": "^1.4.1",
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "KABBOUCHI\\NovaImpersonate\\ToolServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "KABBOUCHI\\NovaImpersonate\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova field allows you to authenticate as your users.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "time": "2019-12-16T08:30:29+00:00"
+        },
+        {
             "name": "kitetail/zttp",
             "version": "v0.6.0",
             "source": {
@@ -1284,6 +1326,71 @@
                 "http"
             ],
             "time": "2019-06-10T12:18:52+00:00"
+        },
+        {
+            "name": "lab404/laravel-impersonate",
+            "version": "1.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/404labfr/laravel-impersonate.git",
+                "reference": "7c4d5345a76aedf58d38fc986ec933b10685909a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/404labfr/laravel-impersonate/zipball/7c4d5345a76aedf58d38fc986ec933b10685909a",
+                "reference": "7c4d5345a76aedf58d38fc986ec933b10685909a",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "5.8.* | ^6.0",
+                "php": ">=7.1.3"
+            },
+            "require-dev": {
+                "orchestra/database": "^3.8 | ^4.0",
+                "orchestra/testbench": "^3.8 | ^4.0",
+                "phpunit/phpunit": "^7.5 | ^8.0",
+                "symfony/http-foundation": ">=4.3.8",
+                "symfony/mime": ">=4.3.8"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Lab404\\Impersonate\\ImpersonateServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Lab404\\Impersonate\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "404lab",
+                    "email": "web@404lab.fr"
+                }
+            ],
+            "description": "Laravel Impersonate is a plugin that allows to you to authenticate as your users.",
+            "keywords": [
+                "auth",
+                "impersonate",
+                "impersonation",
+                "laravel",
+                "laravel-package",
+                "laravel-plugin",
+                "package",
+                "plugin",
+                "user"
+            ],
+            "time": "2020-01-02T15:27:10+00:00"
         },
         {
             "name": "laminas/laminas-diactoros",

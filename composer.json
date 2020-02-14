@@ -12,6 +12,7 @@
         "drobee/nova-sluggable": "^1.2",
         "fideloper/proxy": "^4.0",
         "genealabs/nova-passport-manager": "*",
+        "kabbouchi/nova-impersonate": "^1.1",
         "kitetail/zttp": "^0.6.0",
         "laravel/framework": "^6.2",
         "laravel/nova": "*",

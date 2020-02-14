@@ -81,14 +81,14 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     public function tools()
     {
         return [
-            (new \Vyuldashev\NovaPermission\NovaPermissionTool())->canSee(function (Request $request) {
-                $request->user()->hasRole('super-admin');
+            (new \Vyuldashev\NovaPermission\NovaPermissionTool())->canSee(function ($request) {
+                return auth()->user()->hasRole('super-admin');
             }),
-            (new \PhpJunior\NovaLogViewer\Tool())->canSee(function (Request $request) {
-                $request->user()->hasRole('super-admin');
+            (new \PhpJunior\NovaLogViewer\Tool())->canSee(function () {
+                return auth()->user()->hasRole('super-admin');
             }),
-            (new \Spatie\TailTool\TailTool())->canSee(function (Request $request) {
-                $request->user()->hasRole('super-admin');
+            (new \Spatie\TailTool\TailTool())->canSee(function ($request) {
+                return auth()->user()->hasRole('super-admin');
             }),
 
         ];
