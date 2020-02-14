@@ -2,8 +2,10 @@
 
 namespace App\Providers;
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Nova\Cards\Help;
+use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Nova;
 use Laravel\Nova\NovaApplicationServiceProvider;
 
@@ -27,9 +29,9 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     protected function routes()
     {
         Nova::routes()
-                ->withAuthenticationRoutes()
-                ->withPasswordResetRoutes()
-                ->register();
+            ->withAuthenticationRoutes()
+            ->withPasswordResetRoutes()
+            ->register();
     }
 
     /**
@@ -79,9 +81,15 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     public function tools()
     {
         return [
-            \Vyuldashev\NovaPermission\NovaPermissionTool::make(),
-            new \PhpJunior\NovaLogViewer\Tool(),
-            new \Spatie\TailTool\TailTool(),
+            (new \Vyuldashev\NovaPermission\NovaPermissionTool())->canSee(function (Request $request) {
+                $request->user()->hasRole('super-admin');
+            }),
+            (new \PhpJunior\NovaLogViewer\Tool())->canSee(function (Request $request) {
+                $request->user()->hasRole('super-admin');
+            }),
+            (new \Spatie\TailTool\TailTool())->canSee(function (Request $request) {
+                $request->user()->hasRole('super-admin');
+            }),
 
         ];
     }

@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\BelongsToMany;
 use Laravel\Nova\Fields\Boolean;
+use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
@@ -41,7 +42,7 @@ class Enterprise extends Resource
     /**
      * Get the fields displayed by the resource.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return array
      */
     public function fields(Request $request)
@@ -57,8 +58,9 @@ class Enterprise extends Resource
             Textarea::make('About')->nullable(),
             BelongsTo::make('User', 'user'),
 
-            BelongsToMany::make('Users', 'users')
+//            BelongsToMany::make('Users', 'users')
 
+            HasMany::make('Teams')
 
         ];
     }
@@ -66,7 +68,7 @@ class Enterprise extends Resource
     /**
      * Get the cards available for the request.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return array
      */
     public function cards(Request $request)
@@ -77,7 +79,7 @@ class Enterprise extends Resource
     /**
      * Get the filters available for the resource.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return array
      */
     public function filters(Request $request)
@@ -88,7 +90,7 @@ class Enterprise extends Resource
     /**
      * Get the lenses available for the resource.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return array
      */
     public function lenses(Request $request)
@@ -99,11 +101,25 @@ class Enterprise extends Resource
     /**
      * Get the actions available for the resource.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return array
      */
     public function actions(Request $request)
     {
         return [];
+    }
+
+
+    public static function indexQuery(NovaRequest $request, $query)
+    {
+        if ($request->user()->hasRole('super-admin')) {
+            return parent::indexQuery($request, $query);
+        }
+        if ($request->user()->hasRole('enterprise-super-admin')) {
+            return parent::indexQuery($request, $query);
+        }
+
+//        return parent::indexQuery($request, $query);
+
     }
 }
