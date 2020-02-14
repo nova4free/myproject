@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Enterprise;
+use App\Team;
+
 
 class EnterpriseSeeder extends Seeder
 {

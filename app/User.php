@@ -51,5 +51,12 @@ class User extends Authenticatable
         return $this->belongsToMany(Team::class);
     }
 
+    public static function usersByRoles($roles = [])
+    {
+        return User::whereHas("roles", function ($q) use ($roles) {
+            $q->whereIn("name", "Member");
+        })->get();
+    }
+
 
 }

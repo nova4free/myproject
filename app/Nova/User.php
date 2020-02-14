@@ -2,6 +2,7 @@
 
 namespace App\Nova;
 
+use App\Nova\Filters\UserRole;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsToMany;
 use Laravel\Nova\Fields\Gravatar;
@@ -93,7 +94,9 @@ class User extends Resource
      */
     public function filters(Request $request)
     {
-        return [];
+        return [
+            new UserRole()
+        ];
     }
 
     /**
@@ -115,6 +118,8 @@ class User extends Resource
      */
     public function actions(Request $request)
     {
-        return [];
+        return [
+
+        ];
     }
 }

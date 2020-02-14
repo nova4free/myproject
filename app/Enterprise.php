@@ -15,4 +15,9 @@ class Enterprise extends Model
     {
         return $this->belongsToMany(User::class);
     }
+
+    public function teams()
+    {
+        return $this->hasMany(Team::class);
+    }
 }
